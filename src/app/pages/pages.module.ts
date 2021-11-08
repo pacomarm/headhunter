@@ -7,6 +7,8 @@ import { SurveyComponent } from './survey/survey.component';
 import { SharedModule } from '../shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LookupComponent } from './lookup/lookup.component';
+import { DateSignupComponent } from './date-signup/date-signup.component';
+import { HistoricComponent } from './historic/historic.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +16,8 @@ import { LookupComponent } from './lookup/lookup.component';
     LandingComponent,
     SurveyComponent,
     LookupComponent,
+    DateSignupComponent,
+    HistoricComponent,
   ],
   imports: [
     CommonModule,
