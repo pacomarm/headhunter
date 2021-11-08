@@ -1,5 +1,5 @@
-<div id="makeDate">
-    <h1 id="title">Establecer Cita</h1>
+<div id="survey">
+    <h1 id="title">Evaluar Experiencia</h1>
     <div id="mainContainer">
         <div id="formz">
             <div class="group">
@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="group">
-                <label class="form-label lbl">Nombre del Invitado</label>
+                <label class="form-label lbl">Nombre (o empresa) del Tercero Por Evaluar</label>
                 <input class="form-control fld">
             </div>
             <div class="group">
@@ -41,22 +41,17 @@
                 </div>
             </div>
             <div class="group">
-                <label class="form-label lbl">Fecha y Hora del Evento</label>
-                <input class="form-control fld">
-            </div>
-            <div id="subH">
-                <p class="subs">Tus Medios de Contacto</p>
-            </div>
-            <div class="group">
-                <label class="form-label lbl">Teléfono</label>
-                <input class="form-control fld">
-            </div>
-            <div class="group">
-                <label class="form-label lbl">Email</label>
-                <input class="form-control fld">
+                <label class="form-label lbl txt">Evalúa tu experiencia con esta Persona/Empresa:  </label>
+                <div id="stars">
+                    <fa-icon [icon]="faStar" class="str"></fa-icon>
+                    <fa-icon [icon]="faStar" class="str"></fa-icon>
+                    <fa-icon [icon]="faStar" class="str"></fa-icon>
+                    <fa-icon [icon]="faStar" class="str"></fa-icon>
+                    <fa-icon [icon]="faStar" class="str"></fa-icon>
+                </div>
             </div>
             <div class="group">
-                <label class="form-label lbl">Skype</label>
+                <label class="form-label lbl">Comentarios</label>
                 <input class="form-control fld">
             </div>
         </div>
