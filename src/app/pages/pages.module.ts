@@ -9,6 +9,12 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { LookupComponent } from './lookup/lookup.component';
 import { DateSignupComponent } from './date-signup/date-signup.component';
 import { HistoricComponent } from './historic/historic.component';
+import { AddTalentComponent } from './talent/add/add.component';
+import { ViewTalentComponent } from './talent/view/view.component';
+import { AddHunterComponent } from './hunter/add/add.component';
+import { ViewHunterComponent } from './hunter/view/view.component';
+import { AddAnnounceComponent } from './announce/add/add.component';
+import { AddSpeedComponent } from './speed/add/add.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +24,12 @@ import { HistoricComponent } from './historic/historic.component';
     LookupComponent,
     DateSignupComponent,
     HistoricComponent,
+    AddTalentComponent,
+    ViewTalentComponent,
+    AddHunterComponent,
+    ViewHunterComponent,
+    AddAnnounceComponent,
+    AddSpeedComponent,
   ],
   imports: [
     CommonModule,

@@ -1,1 +1,58 @@
-<p>historic works!</p>
+<div id="historic">
+    <h1 id="title"> Generar Histórico</h1>
+    <div id="mainContainer">
+        <div id="formz">
+            <div class="group">
+                <label class="form-label lbl">Tu nombre</label>
+                <input class="form-control fld">
+            </div>
+            <div class="group">
+                <label class="form-label lbl">Tu rol</label>
+                <div class="form-check op">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Talento
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Head Hunter
+                    </label>
+                </div>
+            </div>
+            <div class="group">
+                <label class="form-label lbl">Actividades de las que quieres Histórico</label>
+                <div class="form-check op">
+                    <input class="form-check-input" type="checkbox">
+                    <label class="form-check-label">
+                        Evaluación de tu reputación
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Empresas que han solicitado tus servicios
+                    </label>
+                </div>
+            </div>
+            <div id="subH">
+                <p class="subs">Fechas para generar Histórico</p>
+            </div>
+            <div class="group">
+                <label class="form-label lbl">Fecha Inicio</label>
+                <input class="form-control fld">
+            </div>
+            <div class="group">
+                <label class="form-label lbl">Fecha Fin</label>
+                <input class="form-control fld">
+            </div>
+        </div>
+        <div id="ftr">
+            <button class="btn btn-success">
+                Generar
+            </button>
+        </div>
+    </div>
+    <app-back-btn></app-back-btn>
+</div>

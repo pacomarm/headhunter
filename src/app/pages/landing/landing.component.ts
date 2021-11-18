@@ -14,6 +14,7 @@ export class LandingComponent implements OnInit {
   }
 
   go(route: string){
+    console.log(route)
     this.router.navigateByUrl(`/${route}`);
   }
 

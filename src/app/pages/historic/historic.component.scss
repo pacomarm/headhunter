@@ -1,0 +1,52 @@
+#historic{
+    height: 100%;
+    #title{
+        height: 10%;
+        text-align: center;
+        padding: 1rem;
+    }
+    #mainContainer{
+        height: 70%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        #formz{
+            width: 50%;
+            .group{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1rem;
+                .lbl{
+                    margin-right: 1rem;
+                    font-weight: bold;
+                }
+                .fld{
+                    width: 50%;
+                }
+                .op{
+                    margin-right: .5rem;
+                }
+                .txt{
+                    margin-bottom: 0px !important;
+                }
+                .slct{
+                    width: 50%;
+                }
+            }
+            #subH{
+                display: flex;
+                justify-content: center;
+                font-weight: bold;
+            }
+        }
+        #ftr{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+    }
+}
