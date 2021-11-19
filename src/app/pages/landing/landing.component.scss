@@ -1,5 +1,19 @@
 #landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 100%;
     .bts{
         margin: 1rem;
+    }
+    .cover{
+        height: 70vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        img{
+            height: 100%;
+        }
     }
 }
