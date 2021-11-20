@@ -13,8 +13,9 @@ export class AnnounceService {
     const body = {
       title: annouce.title,
       description: annouce.description,
-      category: 'Ciencia de Datos',
-      payment: 350,
+      category: 'Seguridad',
+      payment: 1000,
+      status: annouce.status,
     };
     return this.httpClient.post(`${environment.api}/project`, body);
   }

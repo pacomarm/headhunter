@@ -11,10 +11,10 @@ export class SpeedService {
 
   createSpeed(speed: any) {
     const body = {
-      name: speed.name,
+      title: speed.title,
       email: speed.email,
       description: speed.description,
-      modality: speed.modality,
+      modality: 'Online',
     };
     return this.httpClient.post(`${environment.api}/speeddate`, body);
   }

@@ -9,7 +9,7 @@ import Swal from 'sweetalert2'
 })
 export class AddSpeedComponent implements OnInit {
   form = {
-    name: '',
+    title: '',
     email: '',
     description: '',
     modality: '',
