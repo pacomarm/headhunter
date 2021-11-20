@@ -11,7 +11,7 @@ export class SpeedService {
 
   createSpeed(speed: any) {
     const body = {
-      name: speed.name,
+      title: speed.title,
       email: speed.email,
       description: speed.description,
       modality: 'Online',

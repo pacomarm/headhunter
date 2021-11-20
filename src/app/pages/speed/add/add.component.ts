@@ -8,7 +8,7 @@ import { SpeedService } from 'src/app/services/speed.service';
 })
 export class AddSpeedComponent implements OnInit {
   form = {
-    name: '',
+    title: '',
     email: '',
     description: '',
     modality: '',
