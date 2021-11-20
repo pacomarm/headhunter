@@ -4,28 +4,28 @@ import { TalentService } from '../../../services/talent.service';
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
-  styleUrls: ['./add.component.scss']
+  styleUrls: ['./add.component.scss'],
 })
 export class AddTalentComponent implements OnInit {
-
   form = {
     name: '',
+    username: '',
+    telephone: '',
     email: '',
     password: '',
     state: '',
     profession: '',
-    skills: ''
-  }
+    skills: '',
+    cost: '',
+  };
 
-  constructor(private talentService: TalentService) { }
+  constructor(private talentService: TalentService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
-  submit(){
+  submit() {
     this.talentService.createTalent(this.form).subscribe((res) => {
-      console.log(res)
+      console.log(res);
     });
   }
-
 }

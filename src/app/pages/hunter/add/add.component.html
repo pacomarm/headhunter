@@ -1,70 +1,115 @@
 <div id="signup">
-    <!-- <h1 id="title">Cazador de Talento</h1> -->
-    <div id="mainContainer">
-        <div id="formz">
-            <form class="row g-3">
-                <div class="col-md-6">
-                    <label class="form-label lbl">Nombre Completo</label>
-                    <input type="text" class="form-control" name="specificSizeInputName" [(ngModel)]="form.name">
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label lbl">Usuario</label>
-                    <div class="input-group">
-                        <div class="input-group-text">@</div>
-                        <input type="text" class="form-control" id="inlineFormInputGroupUsername"
-                            placeholder="Rockstar">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label lbl">Nombre de la Compañia</label>
-                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label lbl">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="jane.doe@example.com">
-                </div>
-                <div class="col-md-6">
-                    <label for="telephone" class="form-label lbl">Teléfono</label>
-                    <input type="email" class="form-control" placeholder="123456789">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label lbl">Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="***********">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label lbl">Confirmar Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="***********">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputCountry" class="form-label lbl">País</label>
-                    <select id="inputCountry" class="form-select">
-                        <option selected>Selección</option>
-                        <option>...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div class="col-md-12">
-                    <label for="inputState" class="form-label lbl">Estado</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Selección</option>
-                        <option>...</option>
-                        <option>...</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="capabilitiesDescription" class="form-label lbl">Descripción de Proyectos</label>
-                    <textarea class="form-control" id="capabilitiesDescription" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="formFile" class="form-label lbl">Fotografía</label>
-                    <input class="form-control" type="file" id="formFile">
-                </div>
-                <button class="btn btn-primary btn-block mb-4" (click)="submit()">Registrarse</button>
-            </form>
+  <!-- <h1 id="title">Cazador de Talento</h1> -->
+  <div id="mainContainer">
+    <div id="formz">
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label lbl">Nombre Completo</label>
+          <input
+            type="text"
+            class="form-control"
+            name="specificSizeInputName"
+            placeholder="Jane Doe"
+            [(ngModel)]="form.name"
+          />
         </div>
+        <div class="col-md-6">
+          <label class="form-label lbl">Usuario</label>
+          <div class="input-group">
+            <div class="input-group-text">@</div>
+            <input
+              type="text"
+              class="form-control"
+              name="inlineFormInputGroupUsername"
+              placeholder="Rockstar"
+              [(ngModel)]="form.username"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label lbl">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="inputEmail4"
+            placeholder="jane.doe@example.com"
+            [(ngModel)]="form.email"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="telephone" class="form-label lbl">Teléfono</label>
+          <input
+            type="telephone"
+            class="form-control"
+            name="inputNumber"
+            placeholder="123456789"
+            [(ngModel)]="form.telephone"
+          />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label lbl">Nombre de la Compañia</label>
+          <input
+            type="text"
+            class="form-control"
+            name="specificSizeInputName"
+            placeholder="Facebook"
+            [(ngModel)]="form.company"
+          />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label lbl">Estado</label>
+          <input
+            type="text"
+            class="form-control"
+            name="inputState"
+            placeholder="Puebla"
+            [(ngModel)]="form.state"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label lbl">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            name="inputPassword4"
+            placeholder="***********"
+            [(ngModel)]="form.password"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label lbl"
+            >Confirmar Contraseña</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            id="inputPassword4"
+            placeholder="***********"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="capabilitiesDescription" class="form-label lbl"
+            >Proyectos</label
+          >
+          <textarea
+            class="form-control"
+            name="capabilitiesDescription"
+            rows="3"
+            [(ngModel)]="form.projects"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="formFile" class="form-label lbl">Fotografía</label>
+          <input class="form-control" type="file" id="formFile" />
+        </div>
+        <button class="btn btn-primary btn-block mb-4" (click)="submit()">
+          Registrarse
+        </button>
+      </form>
     </div>
-    <br />
-    <div style="padding-bottom: 1rem;">
-        <app-back-btn></app-back-btn>
-    </div>
+  </div>
+  <br />
+  <div style="padding-bottom: 1rem">
+    <app-back-btn></app-back-btn>
+  </div>
 </div>

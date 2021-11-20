@@ -1,82 +1,136 @@
 <div id="signup">
-    <!-- <h1 id="title">Proveedor de Talento</h1> -->
-    <div id="mainContainer">
-        <div id="formz">
-            <form class="row g-3">
-                <div class="col-md-6">
-                    <label class="form-label lbl lbl">Nombre Completo</label>
-                    <input type="text" class="form-control" name="specificSizeInputName" placeholder="Nombre" [(ngModel)]="form.name">
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label lbl">Usuario</label>
-                    <div class="input-group">
-                        <div class="input-group-text">@</div>
-                        <input type="text" class="form-control" placeholder="id">
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <label for="inputEmail4" class="form-label lbl">Email</label>
-                    <input type="email" class="form-control" name="email" placeholder="Correo" [(ngModel)]="form.email">
-                </div>
-                <div class="col-md-6">
-                    <label for="telephone" class="form-label lbl">Teléfono</label>
-                    <input type="email" class="form-control">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label lbl">Contraseña</label>
-                    <input type="password" class="form-control" name="password" placeholder="***********" [(ngModel)]="form.password">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputPassword4" class="form-label lbl">Confirmar Contraseña</label>
-                    <input type="password" class="form-control" placeholder="***********">
-                </div>
-                <div class="col-md-6">
-                    <label for="inputCountry" class="form-label lbl">País</label>
-                    <select id="inputCountry" class="form-select">
-                        <option selected>Selección</option>
-                        <option>México</option>
-                        <option>Estados Unidos</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label for="inputState" class="form-label lbl">Estado</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Selección</option>
-                        <option>Puebla</option>
-                        <option>Coahuila</option>
-                    </select>
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label lbl">Profesión</label>
-                    <input type="text" class="form-control" name="specificSizeInputName" placeholder="career" [(ngModel)]="form.profession">
-                </div>
-                <div class="col-md-6">
-                    <label class="form-label lbl">Costo Hora/Persona</label>
-                    <div class="input-group">
-                        <div class="input-group-text">$</div>
-                        <input type="text" class="form-control" placeholder="Formato MXN">
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <label for="inputState" class="form-label lbl">Disponibilidad de Horario</label>
-                    <select class="form-select" aria-label="Default select example">
-                        <option value="m">Mañana</option>
-                        <option value="t">Tarde</option>
-                        <option value="n">Noche</option>
-                    </select>
-                </div>
-                <div class="mb-3">
-                    <label for="capabilitiesDescription" class="form-label lbl">Descripción de Capacidades</label>
-                    <textarea class="form-control" name="capabilitiesDescription" [(ngModel)]="form.skills" rows="3"></textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="formFile" class="form-label lbl">Fotografía</label>
-                    <input class="form-control" type="file" id="formFile">
-                </div>
-                <button class="btn btn-primary btn-block mb-4" (click)="submit()">Registrarse</button>
-            </form>
-            <app-back-btn></app-back-btn>
+  <!-- <h1 id="title">Proveedor de Talento</h1> -->
+  <div id="mainContainer">
+    <div id="formz">
+      <form class="row g-3">
+        <div class="col-md-6">
+          <label class="form-label lbl lbl">Nombre Completo</label>
+          <input
+            type="text"
+            class="form-control"
+            name="specificSizeInputName"
+            placeholder="Nombre"
+            [(ngModel)]="form.name"
+          />
         </div>
+        <div class="col-md-6">
+          <label class="form-label lbl">Usuario</label>
+          <div class="input-group">
+            <div class="input-group-text">@</div>
+            <input
+              type="text"
+              class="form-control"
+              name="specificSizeInputUsername"
+              placeholder="Batman"
+              [(ngModel)]="form.username"
+            />
+          </div>
+        </div>
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label lbl">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            placeholder="Correo"
+            [(ngModel)]="form.email"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="telephone" class="form-label lbl">Teléfono</label>
+          <input
+            type="telephone"
+            name="inputNumber"
+            class="form-control"
+            placeholder="1234567890"
+            [(ngModel)]="form.telephone"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label lbl">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="***********"
+            [(ngModel)]="form.password"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label lbl"
+            >Confirmar Contraseña</label
+          >
+          <input
+            type="password"
+            class="form-control"
+            placeholder="***********"
+          />
+        </div>
+
+        <div class="col-md-6">
+          <label class="form-label lbl">Estado</label>
+          <input
+            type="text"
+            class="form-control"
+            name="inputState"
+            placeholder="Puebla"
+            [(ngModel)]="form.state"
+          />
+        </div>
+        <div class="col-md-6">
+          <label class="form-label lbl">Profesión</label>
+          <input
+            type="text"
+            class="form-control"
+            name="specificSizeInputName"
+            placeholder="Hacker"
+            [(ngModel)]="form.profession"
+          />
+        </div>
+        <div class="col-md-12">
+          <label class="form-label lbl">Costo Hora/Persona</label>
+          <div class="input-group">
+            <div class="input-group-text">$</div>
+            <input
+              type="text"
+              class="form-control"
+              name="cost"
+              placeholder="Formato MXN"
+              [(ngModel)]="form.cost"
+            />
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label for="inputState" class="form-label lbl"
+            >Disponibilidad de Horario</label
+          >
+          <select class="form-select" aria-label="Default select example">
+            <option value="m">Mañana</option>
+            <option value="t">Tarde</option>
+            <option value="n">Noche</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="capabilitiesDescription" class="form-label lbl"
+            >Descripción de Capacidades</label
+          >
+          <textarea
+            class="form-control"
+            name="capabilitiesDescription"
+            [(ngModel)]="form.skills"
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="formFile" class="form-label lbl">Fotografía</label>
+          <input class="form-control" type="file" id="formFile" />
+        </div>
+        <button class="btn btn-primary btn-block mb-4" (click)="submit()">
+          Registrarse
+        </button>
+      </form>
+      <app-back-btn></app-back-btn>
     </div>
-    <br />
+  </div>
+  <br />
 </div>

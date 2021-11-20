@@ -1,28 +1,30 @@
 import { Component, OnInit } from '@angular/core';
-import { TalentService } from '../../../services/talent.service';
+import { HeadHunterService } from '../../../services/headhunter.service';
 
 @Component({
   selector: 'app-add',
   templateUrl: './add.component.html',
-  styleUrls: ['./add.component.scss']
+  styleUrls: ['./add.component.scss'],
 })
 export class AddHunterComponent implements OnInit {
-
   form = {
-    name: ''
-  }
+    name: '',
+    username: '',
+    telephone: '',
+    email: '',
+    password: '',
+    state: '',
+    company: '',
+    projects: '',
+  };
 
-  namedfksdjfk = ''
+  constructor(private headhunterService: HeadHunterService) {}
 
-  constructor(private talentService:TalentService) { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
-  submit(){
-    this.talentService.createHunter(this.form).subscribe((res) => {
-      console.log(res)
+  submit() {
+    this.headhunterService.createHeadHunter(this.form).subscribe((res) => {
+      console.log(res);
     });
   }
-
 }
