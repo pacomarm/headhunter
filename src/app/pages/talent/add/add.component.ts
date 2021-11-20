@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TalentService } from '../../../services/talent.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-add',
@@ -26,6 +27,11 @@ export class AddTalentComponent implements OnInit {
   submit() {
     this.talentService.createTalent(this.form).subscribe((res) => {
       console.log(res);
+      Swal.fire(
+        'Éxito!',
+        'Talento agregado correctamente',
+        'success'
+      )
     });
   }
 }

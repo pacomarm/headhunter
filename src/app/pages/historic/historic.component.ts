@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnounceService } from '../../services/announce.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-historic',
@@ -22,6 +23,11 @@ export class HistoricComponent implements OnInit {
           email: e.email,
           projects: e.projects
         }))
+        Swal.fire(
+          'Éxito!',
+          'Histórico generado correctamente',
+          'success'
+        )
       }
     });
   }

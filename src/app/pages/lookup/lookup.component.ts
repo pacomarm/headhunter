@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnounceService } from '../../services/announce.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-lookup',
@@ -24,6 +25,11 @@ export class LookupComponent implements OnInit {
           category: e.category,
           status: e.status,
         }))
+        Swal.fire(
+          'Éxito!',
+          'Proyectos recuperados correctamente',
+          'success'
+        )
       }
     });
   }

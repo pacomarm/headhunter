@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AnnounceService } from 'src/app/services/announce.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-add',
@@ -21,6 +22,11 @@ export class AddAnnounceComponent implements OnInit {
   submit() {
     this.announceService.createAnnounce(this.form).subscribe((res) => {
       console.log(res);
+      Swal.fire(
+        'Éxito!',
+        'Proyecto agregado correctamente',
+        'success'
+      )
     });
   }
 }

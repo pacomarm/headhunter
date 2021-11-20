@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HeadHunterService } from '../../../services/headhunter.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-add',
@@ -25,6 +26,11 @@ export class AddHunterComponent implements OnInit {
   submit() {
     this.headhunterService.createHeadHunter(this.form).subscribe((res) => {
       console.log(res);
+      Swal.fire(
+        'Éxito!',
+        'Cazador agregado correctamente',
+        'success'
+      )
     });
   }
 }

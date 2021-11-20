@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpeedService } from 'src/app/services/speed.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-add',
@@ -21,6 +22,11 @@ export class AddSpeedComponent implements OnInit {
   submit() {
     this.speedService.createSpeed(this.form).subscribe((res) => {
       console.log(res);
+      Swal.fire(
+        'Éxito!',
+        'Speed Date agregada correctamente',
+        'success'
+      )
     });
   }
 }

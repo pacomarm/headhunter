@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TalentService } from '../../../services/talent.service';
+import Swal from 'sweetalert2'
 
 @Component({
   selector: 'app-view',
@@ -26,6 +27,11 @@ export class ViewTalentComponent implements OnInit {
           skills: e.skills
         }))
       }
+      Swal.fire(
+        'Éxito!',
+        'Talentos recuperados correctamente',
+        'success'
+      )
     });
   }
 
