@@ -26,4 +26,16 @@ export class TalentService {
     return this.httpClient.post(`${environment.api}/talent/signup`, body);
   }
 
+  createHunter(talent:any){
+    const body = {
+      email: talent.email,
+      name: talent.name,
+      password: talent.password,
+      state: 'Puebla',
+      profession: talent.profession,
+      skills: talent.skills
+    }
+    return this.httpClient.post(`${environment.api}/hunter/signup`, body);
+  }
+
 }

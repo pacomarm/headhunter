@@ -5,7 +5,7 @@
             <form class="row g-3">
                 <div class="col-md-6">
                     <label class="form-label lbl">Nombre Completo</label>
-                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe">
+                    <input type="text" class="form-control" name="specificSizeInputName" [(ngModel)]="form.name">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label lbl">Usuario</label>
@@ -59,7 +59,7 @@
                     <label for="formFile" class="form-label lbl">Fotografía</label>
                     <input class="form-control" type="file" id="formFile">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block mb-4">Registrarse</button>
+                <button class="btn btn-primary btn-block mb-4" (click)="submit()">Registrarse</button>
             </form>
         </div>
     </div>

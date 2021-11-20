@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TalentService } from '../../../services/talent.service';
 
 @Component({
   selector: 'app-add',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddHunterComponent implements OnInit {
 
-  constructor() { }
+  form = {
+    name: ''
+  }
+
+  namedfksdjfk = ''
+
+  constructor(private talentService:TalentService) { }
 
   ngOnInit(): void {
+  }
+
+  submit(){
+    this.talentService.createHunter(this.form).subscribe((res) => {
+      console.log(res)
+    });
   }
 
 }
