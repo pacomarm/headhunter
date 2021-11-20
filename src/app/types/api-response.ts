@@ -3,4 +3,5 @@ export type apiResponse = {
     talents?: any[]
     projects?: any[]
     records?: any[]
+    headhunters?: any[]
 }
