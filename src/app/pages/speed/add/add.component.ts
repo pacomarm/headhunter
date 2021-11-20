@@ -19,7 +19,7 @@ export class AddSpeedComponent implements OnInit {
   ngOnInit(): void {}
 
   submit() {
-    this.speedService.createTalent(this.form).subscribe((res) => {
+    this.speedService.createSpeed(this.form).subscribe((res) => {
       console.log(res);
     });
   }

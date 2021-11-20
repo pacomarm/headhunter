@@ -9,7 +9,7 @@ import { apiResponse } from '../types/api-response';
 export class SpeedService {
   constructor(private httpClient: HttpClient) {}
 
-  createTalent(speed: any) {
+  createSpeed(speed: any) {
     const body = {
       name: speed.name,
       email: speed.email,
@@ -19,7 +19,7 @@ export class SpeedService {
     return this.httpClient.post(`${environment.api}/speeddate`, body);
   }
 
-  getTalent() {
+  getSpeeds() {
     return this.httpClient.get<apiResponse>(`${environment.api}/speeddate`);
   }
 }
