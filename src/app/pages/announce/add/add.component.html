@@ -5,13 +5,13 @@
             <form class="row g-3">
                 <div class="col-md-12">
                     <label class="form-label lbl">Nombre del Proyecto</label>
-                    <input type="text" class="form-control" id="specificSizeInputName"
-                        placeholder="Análisis de Tendencias del COVID19">
+                    <input type="text" class="form-control" name="specificSizeInputName"
+                        [(ngModel)]="form.title">
                 </div>
                 <div class="mb-3">
                     <label for="capabilitiesDescription" class="form-label lbl">Descripción del Proyecto</label>
-                    <textarea class="form-control" id="capabilitiesDescription" rows="3"
-                        placeholder="Esta proyecto trata de tal y cual."></textarea>
+                    <textarea class="form-control" name="capabilitiesDescription" rows="3"
+                        [(ngModel)]="form.description"></textarea>
                 </div>
                 <div class="col-md-12">
                     <label for="inputState" class="form-label lbl">Categoria</label>
@@ -52,7 +52,7 @@
                         <div class="ms-auto">************3456</div>
                     </div>
                 </div>
-                <input type="button" value="Proceder al Pago" class="btn btn-success btn-block btn-lg" />
+                <input type="button" value="Proceder al Pago" class="btn btn-success btn-block btn-lg" (click)="submit()" />
             </form>
         </div>
     </div>

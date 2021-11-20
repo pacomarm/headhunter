@@ -42,11 +42,15 @@
                 font-weight: bold;
             }
         }
-        #ftr{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-        }
+    }
+    .contss{
+        padding: 1.5rem;
+        display: flex;
+    }
+    #ftr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
     }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnnounceService } from '../../services/announce.service';
 
 @Component({
   selector: 'app-historic',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HistoricComponent implements OnInit {
 
-  constructor() { }
+  list:any = []
+
+  constructor(private announceService: AnnounceService) { }
 
   ngOnInit(): void {
+  }
+
+  submit(){
+    this.announceService.getRecord().subscribe((data) => {
+      if(data.status && data.records){
+        this.list = data.records.map((e:any) => ({
+          email: e.email,
+          projects: e.projects
+        }))
+      }
+    });
   }
 
 }

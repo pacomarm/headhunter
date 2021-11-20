@@ -31,11 +31,23 @@
                 </div>
             </div>
         </div>
-        <div id="ftr">
-            <button class="btn btn-success">
-                Buscar
-            </button>
-        </div>
+    </div>
+    <div class="contss" *ngIf="list.length" >
+        <ng-container *ngFor="let item of list">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.title}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{item.category}}</h6>
+                    <p class="card-text">{{item.description}}</p>
+                    <a class="card-link">{{item.status}}</a>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div id="ftr">
+        <button class="btn btn-success" (click)="submit()">
+            Buscar
+        </button>
     </div>
     <app-back-btn></app-back-btn>
 </div>

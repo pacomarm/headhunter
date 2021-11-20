@@ -1,19 +1,18 @@
 #lookup{
-    height: 100%;
+    width: 100%;
     #title{
         height: 10%;
         text-align: center;
         padding: 1rem;
     }
     #mainContainer{
+        padding-top: 5rem;
         height: 70%;
         width: 100%;
         display: flex;
-        flex-direction: column;
-        align-items: center;
         justify-content: center;
         #formz{
-            width: 50%;
+            width: 100%;
             .group{
                 display: flex;
                 align-items: center;
@@ -42,11 +41,15 @@
                 font-weight: bold;
             }
         }
-        #ftr{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 1rem;
-        }
+    }
+    .contss{
+        padding: 1.5rem;
+        display: flex;
+    }
+    #ftr{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
     }
 }

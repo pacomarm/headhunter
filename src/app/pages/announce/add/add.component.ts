@@ -12,7 +12,6 @@ export class AddAnnounceComponent implements OnInit {
     description: '',
     category: '',
     payment: '',
-    status: '',
   };
 
   constructor(private announceService: AnnounceService) {}

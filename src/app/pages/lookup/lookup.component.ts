@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnnounceService } from '../../services/announce.service';
 
 @Component({
   selector: 'app-lookup',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LookupComponent implements OnInit {
 
-  constructor() { }
+  list:any = []
+
+  constructor(private announceService: AnnounceService) { }
 
   ngOnInit(): void {
+  }
+  
+  submit(){
+    this.announceService.getAnnouncements().subscribe((data) => {
+      if(data.status && data.projects){
+        this.list = data.projects.map((e:any) => ({
+          title: e.title,
+          description: e.description,
+          category: e.category,
+          status: e.status,
+        }))
+      }
+    });
   }
 
 }

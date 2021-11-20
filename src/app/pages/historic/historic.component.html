@@ -48,11 +48,23 @@
                 <input class="form-control fld">
             </div>
         </div>
-        <div id="ftr">
-            <button class="btn btn-success">
-                Generar
-            </button>
-        </div>
+    </div>
+    <div class="contss" *ngIf="list.length">
+        <ng-container *ngFor="let item of list">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.email}}</h5>
+                    <ng-container *ngFor="let e of item.projects">
+                        <p class="card-text">{{e}}</p>
+                    </ng-container>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+    <div id="ftr">
+        <button class="btn btn-success">
+            Generar
+        </button>
     </div>
     <app-back-btn></app-back-btn>
 </div>

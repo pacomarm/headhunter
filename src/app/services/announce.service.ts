@@ -13,15 +13,18 @@ export class AnnounceService {
     const body = {
       title: annouce.title,
       description: annouce.description,
-      category: annouce.category,
-      payment: annouce.payment,
-      status: annouce.status,
+      category: 'Ciencia de Datos',
+      payment: 350,
     };
-
     return this.httpClient.post(`${environment.api}/project`, body);
   }
 
   getAnnouncements() {
     return this.httpClient.get<apiResponse>(`${environment.api}/project`);
   }
+
+  getRecord() {
+    return this.httpClient.get<apiResponse>(`${environment.api}/record`);
+  }
+
 }
