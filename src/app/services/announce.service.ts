@@ -13,8 +13,8 @@ export class AnnounceService {
     const body = {
       title: annouce.title,
       description: annouce.description,
-      category: annouce.category,
-      payment: annouce.payment,
+      category: 'Seguridad',
+      payment: 1000,
       status: annouce.status,
     };
 

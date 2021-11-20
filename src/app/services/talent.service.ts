@@ -20,6 +20,7 @@ export class TalentService {
       profession: talent.profession,
       skills: talent.skills,
       cost: talent.cost,
+      schedule: 'tarde',
     };
     return this.httpClient.post(`${environment.api}/talent/signup`, body);
   }

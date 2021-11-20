@@ -14,7 +14,7 @@ export class SpeedService {
       name: speed.name,
       email: speed.email,
       description: speed.description,
-      modality: speed.modality,
+      modality: 'Online',
     };
     return this.httpClient.post(`${environment.api}/speeddate`, body);
   }
