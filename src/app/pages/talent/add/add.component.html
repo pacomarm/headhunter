@@ -5,52 +5,50 @@
             <form class="row g-3">
                 <div class="col-md-6">
                     <label class="form-label lbl lbl">Nombre Completo</label>
-                    <input type="text" class="form-control" id="specificSizeInputName" placeholder="Jane Doe">
+                    <input type="text" class="form-control" name="specificSizeInputName" placeholder="Nombre" [(ngModel)]="form.name">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label lbl">Usuario</label>
                     <div class="input-group">
                         <div class="input-group-text">@</div>
-                        <input type="text" class="form-control" id="inlineFormInputGroupUsername"
-                            placeholder="Rockstar">
+                        <input type="text" class="form-control" placeholder="id">
                     </div>
                 </div>
                 <div class="col-md-6">
                     <label for="inputEmail4" class="form-label lbl">Email</label>
-                    <input type="email" class="form-control" id="inputEmail4" placeholder="jane.doe@example.com">
+                    <input type="email" class="form-control" name="email" placeholder="Correo" [(ngModel)]="form.email">
                 </div>
                 <div class="col-md-6">
                     <label for="telephone" class="form-label lbl">Teléfono</label>
-                    <input type="email" class="form-control" placeholder="123456789">
+                    <input type="email" class="form-control">
                 </div>
                 <div class="col-md-6">
                     <label for="inputPassword4" class="form-label lbl">Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="***********">
+                    <input type="password" class="form-control" name="password" placeholder="***********" [(ngModel)]="form.password">
                 </div>
                 <div class="col-md-6">
                     <label for="inputPassword4" class="form-label lbl">Confirmar Contraseña</label>
-                    <input type="password" class="form-control" id="inputPassword4" placeholder="***********">
+                    <input type="password" class="form-control" placeholder="***********">
                 </div>
                 <div class="col-md-6">
                     <label for="inputCountry" class="form-label lbl">País</label>
                     <select id="inputCountry" class="form-select">
                         <option selected>Selección</option>
-                        <option>...</option>
-                        <option>...</option>
+                        <option>México</option>
+                        <option>Estados Unidos</option>
                     </select>
                 </div>
                 <div class="col-md-6">
                     <label for="inputState" class="form-label lbl">Estado</label>
                     <select id="inputState" class="form-select">
                         <option selected>Selección</option>
-                        <option>...</option>
-                        <option>...</option>
+                        <option>Puebla</option>
+                        <option>Coahuila</option>
                     </select>
                 </div>
                 <div class="col-md-6">
                     <label class="form-label lbl">Profesión</label>
-                    <input type="text" class="form-control" id="specificSizeInputName"
-                        placeholder="Programador Full Stack">
+                    <input type="text" class="form-control" name="specificSizeInputName" placeholder="career" [(ngModel)]="form.profession">
                 </div>
                 <div class="col-md-6">
                     <label class="form-label lbl">Costo Hora/Persona</label>
@@ -69,13 +67,13 @@
                 </div>
                 <div class="mb-3">
                     <label for="capabilitiesDescription" class="form-label lbl">Descripción de Capacidades</label>
-                    <textarea class="form-control" id="capabilitiesDescription" rows="3"></textarea>
+                    <textarea class="form-control" name="capabilitiesDescription" [(ngModel)]="form.skills" rows="3"></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="formFile" class="form-label lbl">Fotografía</label>
                     <input class="form-control" type="file" id="formFile">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block mb-4">Registrarse</button>
+                <button class="btn btn-primary btn-block mb-4" (click)="submit()">Registrarse</button>
             </form>
             <app-back-btn></app-back-btn>
         </div>

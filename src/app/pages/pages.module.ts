@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { FontAModule } from '../modules/font-awesome/font-awesome.module';
 import { DateComponent } from './date/date.component';
 import { LandingComponent } from './landing/landing.component';
@@ -33,6 +34,7 @@ import { AddSpeedComponent } from './speed/add/add.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     FontAModule,
     SharedModule,
     FontAwesomeModule
