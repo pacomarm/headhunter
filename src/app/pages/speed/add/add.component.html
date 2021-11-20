@@ -1,37 +1,68 @@
 <div id="signup">
-    <!-- <h1 id="title">Speed Date</h1> -->
-    <div id="mainContainer">
-        <div id="formz">
-            <form class="row g-3">
-                <div class="col-md-12">
-                    <label class="form-label lbl">Nombre de la Cita de Trabajo</label>
-                    <input type="text" class="form-control" id="specificSizeInputName"
-                        placeholder="Análisis de Tendencias del COVID19">
-                </div>
-                <div class="mb-3">
-                    <label for="capabilitiesDescription" class="form-label lbl">Descripción de la Cita de
-                        Trabajo</label>
-                    <textarea class="form-control" id="capabilitiesDescription" rows="3"
-                        placeholder="Esta cita de trabajo trata de tal y cual."></textarea>
-                </div>
-                <div class="col-md-12">
-                    <label for="inputState" class="form-label lbl">Modalidad</label>
-                    <select id="inputState" class="form-select">
-                        <option selected>Presencial</option>
-                        <option>En Linea</option>
-                    </select>
-                </div>
-                <div class="col-md-12">
-                    <label for="inputState" class="form-label lbl">Hora y Fecha</label>
-                    <input class="form-control" type="datetime-local" placeholder="Selecciona una fecha y hora">
-                </div>
-                <br />
-                <button type="submit" class="btn btn-success btn-block mb-4">Registrar</button>
-            </form>
+  <!-- <h1 id="title">Speed Date</h1> -->
+  <div id="mainContainer">
+    <div id="formz">
+      <form class="row g-3">
+        <div class="col-md-12">
+          <label class="form-label lbl">Nombre de la Cita de Trabajo</label>
+          <input
+            type="text"
+            class="form-control"
+            name="specificSizeInputName"
+            placeholder="Análisis de Tendencias del COVID19"
+            [(ngModel)]="form.name"
+          />
         </div>
+        <div class="mb-3">
+          <label for="capabilitiesDescription" class="form-label lbl"
+            >Descripción de la Cita de Trabajo</label
+          >
+          <textarea
+            class="form-control"
+            name="capabilitiesDescription"
+            rows="3"
+            placeholder="Esta cita de trabajo trata de tal y cual."
+            [(ngModel)]="form.description"
+          ></textarea>
+        </div>
+        <div class="col-md-12">
+          <label for="inputState" class="form-label lbl">Modalidad</label>
+          <select id="inputState" class="form-select">
+            <option selected>Presencial</option>
+            <option>En Linea</option>
+          </select>
+        </div>
+        <div class="col-md-12">
+          <label for="inputState" class="form-label lbl">Hora y Fecha</label>
+          <input
+            class="form-control"
+            type="datetime-local"
+            placeholder="Selecciona una fecha y hora"
+          />
+        </div>
+        <div class="col-md-12">
+          <label class="form-label lbl">Correo</label>
+          <input
+            type="text"
+            class="form-control"
+            name="email"
+            placeholder="hunter@hunter.io"
+            [(ngModel)]="form.email"
+          />
+        </div>
+        <br />
+        <button
+          type="submit"
+          class="btn btn-success btn-block mb-4"
+          (click)="submit()"
+        >
+          Registrar
+        </button>
+      </form>
     </div>
-    <br />
-    <div>
-        <app-back-btn></app-back-btn>
-    </div>
+  </div>
+  <br />
+  <div>
+    <app-back-btn></app-back-btn>
+  </div>
 </div>
